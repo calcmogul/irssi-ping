@@ -1,0 +1,9 @@
+*.d
+*.o
+irssi-local
+!irssi-local/
+irssi-remote
+!irssi-remote/
+
+*.wav
+*.swp
