@@ -28,8 +28,8 @@ int main(int argc, char* argv[]) {
      * These are combined to produce the file name (beep-01.mp3, beep-20.wav)
      */
     char payload[5];
-    std::memcpy(payload, args[0].c_str(), 2);
-    std::memcpy(&payload[2], args[1].c_str(), 3);
+    std::memcpy(payload, args[1].c_str(), 2);
+    std::memcpy(&payload[2], args[2].c_str(), 3);
 
     sf::IpAddress remoteIP(args[0]);
     unsigned short remotePort = 14551;
