@@ -28,7 +28,7 @@ target_include_directories(irssi-local PRIVATE src)
 
 include(FetchContent)
 
-fetchcontent_declare(
+FetchContent_Declare(
     SFML
     GIT_REPOSITORY https://github.com/SFML/SFML.git
     GIT_TAG 3.0.1
@@ -36,7 +36,7 @@ fetchcontent_declare(
     EXCLUDE_FROM_ALL
     SYSTEM
 )
-fetchcontent_makeavailable(SFML)
+FetchContent_MakeAvailable(SFML)
 target_link_libraries(irssi-local PUBLIC SFML::Audio SFML::Network)
 
 install(TARGETS irssi-local DESTINATION bin)
